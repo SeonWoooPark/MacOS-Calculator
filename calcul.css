@@ -1,0 +1,114 @@
+/*수평 수직 정렬*/
+/* html, body {
+    height:100%;
+}
+.wrap {
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+    table-layout: fixed;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #000;
+    background-color: #5a5a5a;
+}
+td, th {
+    border-left: 1px solid #5a5a5a;
+    border-top: 1px solid #5a5a5a;
+    color: white;
+    font-size: 20px;
+}
+.input_num {
+    width: 190px;
+    height: 60px;
+    vertical-align: bottom;
+    padding: 0;
+    overflow: hidden;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.input-display {
+    position: absolute;
+    bottom: 0; /* 텍스트를 아래에 고정 */
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    padding-right: 10px;
+    text-align: right;
+    line-height: 50px;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    background-color: #5a5a5a;
+    border-radius: 10px;
+    width: 190px;
+    height: 50px;
+    border:none;
+    text-align: right;
+    caret-color: transparent;
+    font-size: 40px;
+    color: white;
+    font-weight: 100;
+    vertical-align: bottom;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    line-height:50px;
+} 
+input::placeholder {
+    color: white;
+}
+
+input,
+input:focus,
+textarea,
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.calcul_op {
+    background-color: #FFA01E;
+}
+
+.calcul_op:active, .calcul_op_pressed {
+    filter: brightness(70%);
+}
+
+.number_op {
+    background-color: #787878;
+}
+
+.number_op:active, .number, .number_op_pressed {
+    background-color: #8c8c8c;
+}
+
+.number:active, .number_pressed {
+    background-color: #d2d2d2;
+}
+
+
+.round_left_bot {
+    border-bottom-left-radius: 10px;
+}
+
+.round_right_bot {
+    border-bottom-right-radius: 10px;
+}

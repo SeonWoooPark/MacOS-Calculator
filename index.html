@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맥 계산기</title>
+    <link rel="stylesheet" href="calcul.css">
+</head>
+<body>
+    <div class="wrap">
+        <table>
+            <tr>
+                <td class="input_num" colspan="4">
+                    <div class="input-wrapper">
+                        <div id="inputDisplay" class="input-display"></div>
+                        <input type = "text" name="num" placeholder="0" onkeypress="return checkNumber(event)" autofocus autocomplete="off">
+                    </div>
+                </td>
+                    <!-- <input type = "text" name="num" placeholder="0" onkeypress="return checkNumber(event)" autofocus autocomplete="off"></td> -->
+            </tr>
+            <tr>
+                <td id="AC" class="number_op" onclick="resetNum()">AC</td>
+                <td class="number_op" onclick="changeSign()">+/-</td>
+                <td class="number_op" onclick="calculatePercent()">%</td>
+                <td id="div" class="calcul_op" onclick='pressOp("/")'>/</td>
+            </tr>
+            <tr>
+                <td id = "seven" class="number" onclick='addNum(7)'>7</td>
+                <td id = "eight" class="number" onclick='addNum(8)'>8</td>
+                <td id = "nine" class="number" onclick='addNum(9)'>9</td>
+                <td id="mul" class="calcul_op" onclick='pressOp("*")'>x</td>
+            </tr>
+            <tr>
+                <td id = "four" class="number" onclick='addNum(4)'>4</td>
+                <td id = "five" class="number" onclick='addNum(5)'>5</td>
+                <td id = "six" class="number" onclick='addNum(6)'>6</td>
+                <td id="minus" class="calcul_op" onclick='pressOp("-")'>-</td>
+            </tr>
+            <tr>
+                <td id = "one" class="number" onclick='addNum(1)'>1</td>
+                <td id = "two" class="number" onclick='addNum(2)'>2</td>
+                <td id = "three" class="number" onclick='addNum(3)'>3</td>
+                <td id="plus" class="calcul_op" onclick='pressOp("+")'>+</td>
+            </tr>
+            <tr>
+                <td id="zero" class="number round_left_bot" colspan="2" onclick='addZero()'>0</td>
+                <td id = "point" class="number" onclick="addPoint()">.</td>
+                <td id="equal" class="calcul_op round_right_bot" onclick='pressOp("=")'>=</td>
+            </tr>
+        </table>
+    </div>
+    <script src="calcul.js">
+    </script>
+</body>
+</html>
